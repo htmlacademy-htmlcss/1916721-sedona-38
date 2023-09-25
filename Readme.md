@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Polina Blaginina](https://up.htmlacademy.ru/htmlcss/38/user/1916721).
-* Наставник: `Наталья Зотова`.
+* Наставник: [Наталья Зотова](https://up.htmlacademy.ru/htmlcss/38/user/1079951).
 
 ---
 
