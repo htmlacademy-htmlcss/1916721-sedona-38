@@ -27,4 +27,47 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.nav-link {
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  color: inherit;
+}
+
+.hero {
+  background-image: url("../images/index-background.jpg");
+  background-color: #82B3D3;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+
+}
+
+.page-text, .page-title {
+  text-align: center;
+}
+
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756157;
+}
+
+.search-button {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #756157;
+}
+
+.subscribe-button {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82B3D3;
 }
