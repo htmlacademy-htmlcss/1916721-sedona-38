@@ -111,6 +111,10 @@ body {
   width: 100%;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .nav-link, .user-link {
   line-height: 24px;
   font-weight: 700;
