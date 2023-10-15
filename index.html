@@ -3,24 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
     <div class="wrapper">
       <header class="page-header" data-test="header">
-        <nav class="header-nav">
-          <a href="index.html" aria-current="page" class="nav-logo">
-            <img src="images/logo.svg" width="140" height="70" alt="Логотип сайта Седоны" class="header-logo">
+        <nav class="header-nav nav">
+          <a class="nav-logo" href="index.html" aria-current="page">
+            <img class="header-logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип сайта Седоны">
           </a>
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="index.html" aria-current="page" class="nav-link nav-link-current">Главная</a>
+              <a class="nav-link nav-link-current" href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">О Седоне</a>
+              <a class="nav-link" href="#">О Седоне</a>
             </li>
             <li class="nav-item">
-              <a href="catalog.html" class="nav-link">Гостиницы</a>
+              <a class="nav-link" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
 
@@ -45,7 +46,7 @@
       <main class="main main-index" data-test="main">
         <section class="hero" data-test="hero">
           <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-          <img src="#" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!" class="hero-img">
+          <img class="hero-img" src="images/svg/welcome.svg" width="458" height="352" alt="Welcome to the gorgeous Sedona, because the Grand Canyon sucks!">
         </section>
 
         <section class="advantages" data-test="advantages">
@@ -60,7 +61,7 @@
                 <p class="advantages-description blocks-text">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
               <figure class="advantages-img">
-                <img src="images/advantages_photo-1.jpg" width="800" height="385" alt="Фотография с улицей Седоны">
+                <img src="images/advantages-photo-1.jpg" width="800" height="385" alt="Фотография с улицей Седоны">
               </figure>
             </li>
             <li class="advantages-item">
@@ -87,7 +88,7 @@
                 <p class="advantages-description blocks-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
               </div>
               <figure class="advantages-img">
-                <img src="images/advantages_photo-2.jpg" width="800" height="385" alt="Фотография с видом на мост дьявола">
+                <img src="images/advantages-photo-2.jpg" width="800" height="385" alt="Фотография с видом на мост дьявола">
               </figure>
             </li>
           </ul>
@@ -117,7 +118,7 @@
         <section class="search" data-test="search">
           <h2 class="search-title page-title">Заинтересовались?</h2>
           <p class="search-text page-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-          <a href="#" class="search-button button">Поиск гостиницы в Седоне</a>
+          <a class="search-button button" href="#">Поиск гостиницы в Седоне</a>
         </section>
 
         <section class="subscribe subscribe-home" data-test="subscribe">
@@ -136,26 +137,26 @@
           <li class="social-item">
             <a class="social-link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">ВКонтакте</span>
-              <img src="#" alt="Лого вКонтакте" class="vk">
+              <img class="vk" src="images/svg/vk.svg" width="24" height="14" alt="Лого вКонтакте">
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
-              <img src="#" alt="Лого телеграма" class="telegram">
+              <img class="telegram" src="images/svg/telegram.svg" width="18" height="15" alt="Лого телеграма">
             </a>
           </li>
           <li class="social-item">
             <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
-              <img src="#" alt="Лого ютуба" class="youtube">
+              <img class="youtube" src="images/svg/youtube.svg" width="22" height="17" alt="Лого ютуба">
             </a>
           </li>
         </ul>
 
         <a href="tel:+78128121212" class="footer-phone">+7 (812) 812-12-12</a>
         <a href="https://htmlacademy.ru/" class="htmlacademy-link">
-          <img src="images/htmlacademy.svg" width="114.9" height="32.9" alt="Логотип HTML Academy">
+          <img src="images/svg/htmlacademy.svg" width="115" height="33" alt="Логотип HTML Academy">
         </a>
       </footer>
     </div>
