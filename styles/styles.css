@@ -22,11 +22,16 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0 40px;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -83,12 +88,6 @@ body {
   background-color: transparent;
 }
 
-.menu-button {
-  padding: 8px 34px;
-  width: 160px;
-  height: 36px;
-}
-
 .field {
   width: 100%;
   height: 48px;
@@ -126,15 +125,39 @@ body {
   background-color: #7DB54F;
 }
 
-.nav-list, .user-list, .advantages-list, .services-list, .breadcrumbs-item, .filter-list, .view-type, .product-list, .pagination-item, .social-item {
+.nav-list, .user-list, .advantages-list, .breadcrumbs-item, .filter-list, .view-type, .product-list, .pagination-item, .social-item {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.nav {
+  display: flex;
+  width: 1200px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  padding-left: 70px;
+  gap: 30px;
+}
+
+.header-logo {
+  display: block;
+  position: relative;
+  margin-bottom: -6px;
+  z-index: 2;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: left;
+  width: 464px;
+  margin-right: auto;
+}
+
 .nav-link {
   display: inline-block;
-  padding: 19px 0;
+  padding: 20px 16px;
   line-height: 24px;
   font-weight: 700;
   font-size: 20px;
@@ -149,6 +172,15 @@ body {
   text-underline-offset: 20px;
 }
 
+.user-list {
+  display: flex;
+  width: 132px;
+  height: 64px;
+  margin-left: auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .user-link {
   position: relative;
   display: inline-block;
@@ -160,6 +192,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 18px 18px;
+
 }
 
 .user-link-search {
@@ -178,6 +211,21 @@ body {
   font-size: 10px;
   line-height: 10px;
   color: #ffffff;
+
+  margin: 11px 4px 33px 20px;
+  padding: 4% 5%;
+}
+
+.menu-button {
+  padding: 8px 34px;
+  width: 160px;
+  height: 36px;
+  margin-top: 14px;
+  margin-right: 70px;
+}
+
+.main-index {
+  flex-grow: 1;
 }
 
 .hero {
@@ -232,8 +280,15 @@ body {
   margin: 0;
 }
 
+.advantages-list {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 385px 385px 385px;
+}
+
 .advantages-item {
   background-color: #83B3D333;
+  width: 400px;
 }
 
 .advantages-item:not(.advantages-item-full):nth-child(2n) {
@@ -243,10 +298,38 @@ body {
 .advantages-item-full {
   background-color: #82B3D3;
   color: #ffffff;
+  width: 1200px;
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: row;
+}
+
+.advantages-item-reversed {
+  flex-direction: row-reverse;
+}
+
+.advantages-img {
+  width: 800px;
+  margin: 0;
+}
+
+.advantages-content {
+  padding: 103px 85px;
+  text-align: center;
 }
 
 .advantages-item-full .advantages-subtitle {
   color: #ffffff;
+}
+
+.advantages-subtitle::first-line {
+  text-decoration: underline;
+  text-decoration-color: #FFFFFF4D;
+  text-underline-offset: 60px;
+}
+
+.advantages-description {
+  padding-top: 62px;
 }
 
 .services-title {
@@ -257,11 +340,29 @@ body {
   padding-bottom: 64px;
 }
 
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  display: flex;
+  justify-content: space-between;
+}
+
 .services-item {
   background-color: #83B3D31F;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 80px;
   background-size: 75px 72px;
+  text-align: center;
+
+  width: 400px;
+  height: 385px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
 
 .services-item:nth-child(2n) {
@@ -269,15 +370,24 @@ body {
 }
 
 .services-item-house {
-  background-image: url("../images/svg/house.svg")
+  background-image: url("../images/svg/house.svg");
 }
 
 .services-item-food {
-  background-image: url("../images/svg/food.svg")
+  background-image: url("../images/svg/food.svg");
 }
 
 .services-item-souvenirs {
-  background-image: url("../images/svg/souvenirs.svg")
+  background-image: url("../images/svg/souvenirs.svg");
+}
+
+.services-subtitle {
+  width: 230px;
+  padding-top: 183px;
+}
+
+.services-description {
+  width: 230px;
 }
 
 .search-title {
@@ -301,21 +411,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 
+  padding: 96px 258px 104px;
+
   text-align: center;
   color: #ffffff;
+
 }
 
 .subscribe-title, .subscribe-text {
   color: #ffffff;
 }
 
+.subscribe-title {
+  padding-bottom: 20px;
+}
+
+.subscribe-text {
+  padding: 0 104px 54px;
+}
+
 .subscribe-input {
   border-radius: 4px 0 0 4px;
+  height: 52px;
 }
 
 .subscribe-input::placeholder {
   font-weight: 400;
   opacity: 0.6;
+}
+
+.subscribe-form {
+  display: grid;
+  grid-template-columns: 452px 232px;
+  grid-template-rows: 52px;
 }
 
 .subscribe-button {
@@ -327,12 +455,45 @@ body {
   border-radius: 0 4px 4px 0;
 }
 
+.page-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  gap: 41px;
+  width: 1060px;
+  margin: 40px 70px 30px;
+}
+
+.footer-social {
+  width: 142px;
+  padding: 0;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 41px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-item {
+  width: 47px;
+}
+
 .footer-phone {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
   text-decoration: none;
   color:#000000;
+  padding: 5px 195px;
+}
+
+.htmlacademy-link {
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .breadcrumbs-link {
