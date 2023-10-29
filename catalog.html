@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог</title>
+    <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -12,22 +12,20 @@
     <div class="wrapper">
       <header class="page-header" data-test="header">
         <nav class="header-nav nav">
-          <a class="nav-logo" href="index.html">
+          <a class="nav-logo" href="index.html" aria-current="page">
             <img class="header-logo" src="images/svg/logo.svg" width="140" height="70" alt="Логотип сайта Седоны">
           </a>
-
           <ul class="nav-list list-reset">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Главная</a>
+              <a class="nav-link" href="index.html" aria-current="page">Главная</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">О Седоне</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-current" href="catalog.html" aria-current="page">Гостиницы</a>
+              <a class="nav-link nav-link-current" href="catalog.html">Гостиницы</a>
             </li>
           </ul>
-
 
           <ul class="user-list list-reset">
             <li class="user-item">
@@ -42,7 +40,8 @@
               </a>
             </li>
           </ul>
-          <a class="menu-button button" href="#">Хочу сюда!</a>
+
+          <a class="nav-button button" href="#">Хочу сюда!</a>
         </nav>
       </header>
 
@@ -68,7 +67,7 @@
             <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
               <fieldset class="filter-group filter-group-check">
-                <legend class="filter-title">Инфраструктура</legend>
+                <legend class="filter-title">Инфраструктура:</legend>
 
                 <ul class="filter-list control-list list-reset">
                   <li class="control-item">
@@ -93,7 +92,7 @@
               </fieldset>
 
               <fieldset class="filter-group filter-group-radio">
-                <legend class="filter-title">Тип жилья</legend>
+                <legend class="filter-title">Тип Жилья:</legend>
 
                 <ul class="filter-list control-list list-reset">
                   <li class="control-item">
