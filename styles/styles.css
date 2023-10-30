@@ -487,8 +487,6 @@ img {
   border-radius: 0 4px 4px 0;
 }
 
-/**/
-
 .filter {
   display: flex;
   flex-wrap: wrap;
@@ -775,8 +773,13 @@ li.control-item:not(:last-child) {
   margin: 0;
 }
 
+.product-text-type {
+  grid-column-start: 1;
+}
+
 .product-text-price {
   text-align: right;
+  grid-column-end: -1;
 }
 
 .product-rating-text {
@@ -807,6 +810,8 @@ li.control-item:not(:last-child) {
   height: 37px;
   margin: 0;
 
+  grid-column-start: 1;
+
   background-image: url("../images/svg/four-stars.svg");
   background-repeat: no-repeat;
   background-position: left center;
@@ -826,7 +831,7 @@ li.control-item:not(:last-child) {
 
 .pagination {
   display: flex;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   gap: 8px;
 
   margin: 40px 0 0;
